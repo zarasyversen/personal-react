@@ -1,4 +1,43 @@
-.Home {
-  text-align: center;
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 40px 0;
 }
 
+.home__content {
+  grid-column: 1 / 3;
+  grid-row: 2/ 3;
+  z-index:1;
+  margin-left: 40px;
+}
+
+.home__image {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+.home__image img {
+  width: 100%;
+}
+
+.home__content h2, .home__content span {
+  font-size: 50px;
+  background: white;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.home__content h1 {
+  display: inline-block;
+}
+
+.home__content .role {
+  display: block;
+}
+
+.home__content h2 {
+  display: block;
+  max-width: 300px;
+}
