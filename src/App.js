@@ -9,7 +9,7 @@ class App extends Component {
       <div className="home">
         <div className="home__content">
         <h2>Hej Hej,</h2>
-        <h1><span class="name">My name is Zara and I am</span><span class="role"> a Front End Developer</span><span class="place">in Brighton</span></h1>
+        <h1><span class="name">My name is Zara and I am a </span><span class="role"> Front End Developer</span><span class="place">in Brighton</span></h1>
         </div>
         <div className="home__image">
           <img src={background} alt="clouds" />
