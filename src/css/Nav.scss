@@ -1,22 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:900');
 @import 'var/responsive.scss';
-
-$mint: #D2F1E4;
-$lightpink: #FBCAEF;
-$pink: #F865B0;
-$magenta: #E637BF;
-$purple: #48304D;
-
-$blue: #083D77;
-$beige: #EBEBD3;
-$rouge: #DA4167;
-$yellow: #F4D35E;
-$orange: #F78764;
-
-$gray: #56494E;
+@import 'var/colours.scss';
 
 $indent: 20px;
-
 
 .wrapper {
   width: 80%;
@@ -40,20 +26,9 @@ h3 {
     display: grid;
     min-height: 400px;
     font-family: 'Lato', sans-serif;
-    // max-width: 800px;
     margin: 0 auto;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    // grid-template-rows: repeat(3, 1fr);
-    
-//     @media (max-width: 800px){
-//       grid-template-columns: repeat(2, 1fr);
-//     }
-    
-//     @media (max-width: 400px){
-//       grid-template-columns: 1fr;
-//     }
-
   }
   
   &__item {
@@ -68,6 +43,7 @@ h3 {
         grid-row: span 2;
       }
     }
+    
     &.background {
       background: $beige;
       
