@@ -1,8 +1,9 @@
 @import 'var/colours.scss';
+@import 'var/spacing.scss';
 
 .home {
   display: flex;
-  margin: 20px auto;
+  margin: $indent_l auto 0;
   width: 80%;
   max-width: 750px;
 
@@ -11,38 +12,36 @@
   }
 
   &__content {
-    margin: 10px 0 0 -10px;
+    margin: $indent_s 0 0 -$indent_s;
     z-index: 1;
+
+    h2, span {
+      font-size: 50px;
+      background: white;
+      padding: $indent_s;
+      box-sizing: border-box;
+      margin: $indent 0;
+    }
+
+    h1 {
+      display: inline-block;
+    }
+
+    .role {
+      display: block;
+      width: 90%;
+    }
+
+    h2 {
+      display: block;
+      max-width: 300px;
+    }
   }
 }
 
-
-
-.home__content h2, .home__content span {
-  font-size: 50px;
-  background: white;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: 20px 0;
-}
-
-.home__content h1 {
-  display: inline-block;
-}
-
-.home__content .role {
-  display: block;
-  width: 90%;
-}
-
-.home__content h2 {
-  display: block;
-  max-width: 300px;
-}
-
 .box__path{
-  fill: $pink;
-  stroke: $lightpink;
+  fill: $blue;
+  stroke: $rouge;
   animation: dash 5s linear forwards;
 }
 

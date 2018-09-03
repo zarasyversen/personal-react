@@ -1,35 +1,31 @@
 .home {
   display: flex;
-  margin: 20px auto;
+  margin: 30px auto 0;
   width: 80%;
   max-width: 750px; }
   .home svg {
     position: absolute; }
   .home__content {
-    margin: 10px 0 0 -10px;
+    margin: 10px 0 -10px;
     z-index: 1; }
-
-.home__content h2, .home__content span {
-  font-size: 50px;
-  background: white;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: 20px 0; }
-
-.home__content h1 {
-  display: inline-block; }
-
-.home__content .role {
-  display: block;
-  width: 90%; }
-
-.home__content h2 {
-  display: block;
-  max-width: 300px; }
+    .home__content h2, .home__content span {
+      font-size: 50px;
+      background: white;
+      padding: 10px;
+      box-sizing: border-box;
+      margin: 20px 0; }
+    .home__content h1 {
+      display: inline-block; }
+    .home__content .role {
+      display: block;
+      width: 90%; }
+    .home__content h2 {
+      display: block;
+      max-width: 300px; }
 
 .box__path {
-  fill: #F865B0;
-  stroke: #FBCAEF;
+  fill: #083D77;
+  stroke: #DA4167;
   animation: dash 5s linear forwards; }
 
 @keyframes dash {
