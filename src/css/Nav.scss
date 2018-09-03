@@ -1,0 +1,84 @@
+@import 'var/responsive.scss';
+@import 'var/colours.scss';
+@import 'var/spacing.scss';
+
+
+.wrapper {
+  width: 80%;
+  margin: $indent auto 0;
+  background: white;
+  padding: $indent;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  
+  @media (min-width: $screen__l){
+    font-size: 30px;
+  }
+}
+
+.nav {
+  &__container {
+    display: grid;
+    min-height: 400px;
+    margin: 0 auto;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  &__item {
+    padding: $indent;
+    box-sizing: border-box;
+    
+    &.current {
+      background: $mint;
+      
+      @media (min-width: $screen__l) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+    
+    &.background {
+      background: $beige;
+      
+      @media (min-width: $screen__l) {
+        grid-row: span 2;
+      }
+      
+    }
+    
+    &.community {
+      background: $rouge;
+      
+      @media (min-width: $screen__m){
+        grid-column: span 2;
+      }
+      
+       @media (min-width: $screen__l) {
+        grid-row: span 3;
+      }
+    }
+    
+    &.fun-stuff {
+      background: $yellow;
+    }
+    
+    &.proud-stuff {
+      background: $lightpink;
+      grid-column: 1 / -1;
+      
+       @media (min-width: $screen__s) {
+        grid-column: 2 / -1;
+      }
+      
+      @media (min-width: $screen__l) {
+        grid-column: span 2;
+      }
+      
+    }
+  }
+}
