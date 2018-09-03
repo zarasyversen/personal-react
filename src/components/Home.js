@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import background from '../images/backgrounds/clouds.jpg';
 import '../css/Home.css';
+import {TransitionGroup } from 'react-transition-group';
+import TweenMax from "gsap/TweenMax";
 
 
 class Square extends Component {
@@ -27,6 +28,28 @@ class Square extends Component {
   }
 }
 
+class NavButton extends Component {
+
+    componentDidMount() {
+        const { elTime, easing } = this.props;
+        TweenMax.fromTo(this.navbutton, elTime, {
+            opacity: 0,
+            scale: 0,
+        }, {
+            opacity: 1,
+            scale: 1,
+            delay: 4.8,
+            ease: `${easing}.easeOut`
+        });
+    }
+
+    render() {
+        return (
+            <a className="nav__button" href="/nav" ref={c => this.navbutton = c}>Is this enough</a>
+        );
+    }
+};
+
 class Home extends Component {
   render() {
     return (
@@ -37,8 +60,10 @@ class Home extends Component {
           <h1><span className="name">My name is Zara and I am a </span>
             <span className="role"> Front End Developer</span>
             <span className="place">in Brighton</span></h1>
-          <a href="/nav">Is this enough</a>
         </div>
+          <TransitionGroup className="home__button">
+              { <NavButton elTime={.4} easing="Power1"/> }
+          </TransitionGroup>
       </div>
     );
   }

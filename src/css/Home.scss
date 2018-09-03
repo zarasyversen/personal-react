@@ -3,9 +3,11 @@
 
 .home {
   display: flex;
+  flex-direction: column;
   margin: $indent_l auto 0;
   width: 80%;
   max-width: 750px;
+  position: relative;
 
   svg {
     position: absolute;
@@ -37,6 +39,18 @@
       max-width: 300px;
     }
   }
+
+  &__button {
+    align-self: flex-end;
+    z-index:2;
+  }
+}
+
+
+.nav__button {
+  padding: $indent;
+  border: 2px solid $beige;
+  background: white;
 }
 
 .box__path{

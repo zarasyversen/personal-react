@@ -1,8 +1,10 @@
 .home {
   display: flex;
+  flex-direction: column;
   margin: 30px auto 0;
   width: 80%;
-  max-width: 750px; }
+  max-width: 750px;
+  position: relative; }
   .home svg {
     position: absolute; }
   .home__content {
@@ -22,6 +24,14 @@
     .home__content h2 {
       display: block;
       max-width: 300px; }
+  .home__button {
+    align-self: flex-end;
+    z-index: 2; }
+
+.nav__button {
+  padding: 20px;
+  border: 2px solid #EBEBD3;
+  background: white; }
 
 .box__path {
   fill: #083D77;
