@@ -5,7 +5,7 @@
 
 .wrapper {
   width: 80%;
-  margin: $indent auto 0;
+  margin: 50px auto 0;
   background: white;
   padding: $indent;
   box-sizing: border-box;
@@ -41,8 +41,31 @@ h3 {
     background-size: 200%;
     background-position: center left;
 
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 5px;
+      background: black;
+      transition: .5s;
+    }
+
     &:hover {
       background-position: center right;
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:focus{
+      outline: 0;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        width: 100%;
+      }
     }
 
     &.current {
