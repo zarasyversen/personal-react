@@ -4,9 +4,10 @@ import {TransitionGroup } from 'react-transition-group';
 import TweenMax from "gsap/TweenMax";
 
 
+// SVG Square
 class Square extends Component {
 
-  componentDidMount () {
+  componentDidMount() {
     const path = document.querySelector('.box__path'),
     length = path.getTotalLength();
 
@@ -28,6 +29,7 @@ class Square extends Component {
   }
 }
 
+// Navigation Button - Appears after animation
 class NavButton extends Component {
 
     componentDidMount() {
@@ -45,11 +47,12 @@ class NavButton extends Component {
 
     render() {
         return (
-            <a className="nav__button" href="/nav" ref={c => this.navbutton = c}>Is this enough</a>
+            <a className="nav__button" href="/nav" ref={c => this.navbutton = c}>Find out more</a>
         );
     }
 };
 
+// Home Page
 class Home extends Component {
   render() {
     return (
