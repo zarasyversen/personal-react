@@ -32,10 +32,23 @@ h3 {
   &__item {
     padding: $indent;
     box-sizing: border-box;
-    
+    color: $black;
+    text-decoration: none;
+    position: relative;
+    transition: .8s;
+
+    // For the Gradient Hover Effect
+    background-size: 200%;
+    background-position: center left;
+
+    &:hover {
+      background-position: center right;
+    }
+
     &.current {
-      background: $mint;
-      
+      background-color: $mint;
+      background-image: linear-gradient(60deg, $mint 15%, $pink 100%);
+
       @media (min-width: $screen__l) {
         grid-column: span 2;
         grid-row: span 2;
@@ -43,8 +56,9 @@ h3 {
     }
     
     &.background {
-      background: $beige;
-      
+      background-color: $beige;
+      background-image: linear-gradient(10deg, $beige 10%, $rouge 100%);
+
       @media (min-width: $screen__l) {
         grid-row: span 2;
       }
@@ -52,8 +66,9 @@ h3 {
     }
     
     &.community {
-      background: $rouge;
-      
+      background-color: $rouge;
+      background-image: linear-gradient(60deg, $green 15%, $purple 100%);
+
       @media (min-width: $screen__m){
         grid-column: span 2;
       }
@@ -61,14 +76,17 @@ h3 {
        @media (min-width: $screen__l) {
         grid-row: span 3;
       }
+
     }
     
     &.fun-stuff {
-      background: $yellow;
+      background-color: $yellow;
+      background-image: linear-gradient(40deg, $yellow 35%, $beige 100%);
     }
     
     &.proud-stuff {
-      background: $lightpink;
+      background-color: $lightpink;
+      background-image: linear-gradient(40deg, $orange 15%, $magenta 100%);
       grid-column: 1 / -1;
       
        @media (min-width: $screen__s) {

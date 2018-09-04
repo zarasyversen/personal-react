@@ -6,21 +6,21 @@ class Nav extends Component {
     return (
 	<div className="wrapper">
 	  	<nav className="nav__container">
-		    <div className="nav__item current">
+		    <a className="nav__item current" href="#">
 		      <h3>How I am spending my days right now</h3>
-		    </div>
-		    <div className="nav__item background">
+		    </a>
+		    <a className="nav__item background" href="#">
 		      <h3>Where I am from</h3>
-		    </div>
-		    <div className="nav__item community">
+		    </a>
+		    <a className="nav__item community" href="#">
 		      <h3>How much I love a good community like codebar</h3>
-		    </div>
-		    <div className="nav__item fun-stuff">
+		    </a>
+		    <a className="nav__item fun-stuff" href="#">
 		      <h3>Fun</h3>
-		    </div>
-		    <div className="nav__item proud-stuff">
+		    </a>
+		    <a className="nav__item proud-stuff" href="#">
 		      <h3>Things I am proud of</h3>
-		    </div>
+		    </a>
 	  	</nav>
   	</div>
     );
