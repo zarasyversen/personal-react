@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import background from '../images/backgrounds/clouds.jpg';
 import '../css/Home.css';
+import { Link } from 'react-router-dom'
 
 
 class Square extends Component {
 
-  componentDidMount () {
-    const path = document.querySelector('.box__path'),
-    length = path.getTotalLength();
+  componentDidMount() {
+    const path = document.querySelector('.box__path');
+    const length = path.getTotalLength();
 
     path.style.strokeDasharray = length;
     path.style.strokeDashoffset = length;
@@ -15,13 +16,21 @@ class Square extends Component {
   
   render() {
     return (
-      <svg width="800" 
-      height="410" 
-      viewBox="0 0 800 410" 
-      xmlns="http://www.w3.org/2000/svg" 
-      aria-labelledby="title">
-      <title id="title" lang="en">Outlined Box</title>
-      <path className="box__path" d="M687.642 407.79V2.107H2.432L3.714 407.79z" stroke="#000" strokeWidth="10" fill="none" fillRule="evenodd"/>
+      <svg 
+        width="800" 
+        height="410" 
+        viewBox="0 0 800 410" 
+        xmlns="http://www.w3.org/2000/svg" 
+        aria-labelledby="title">
+        <title id="title" lang="en">Outlined Box</title>
+        <path 
+          className="box__path" 
+          d="M687.642 407.79V2.107H2.432L3.714 407.79z" 
+          stroke="#000" 
+          strokeWidth="10" 
+          fill="none" 
+          fillRule="evenodd" 
+        />
       </svg>
     );
   }
@@ -37,7 +46,7 @@ class Home extends Component {
           <h1><span className="name">My name is Zara and I am a </span>
             <span className="role"> Front End Developer</span>
             <span className="place">in Brighton</span></h1>
-          <a href="/nav">Is this enough</a>
+          <Link to='/nav'> Is rgia wnoufhr</Link>
         </div>
       </div>
     );
