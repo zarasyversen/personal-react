@@ -1,8 +1,26 @@
+/*
+  Used for SVG Path Animation
+ */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+
+/*
+  Used for Gradient Hover Effect
+ */
+@keyframes full-width {
+  from {
+    width: 1px; }
+  to {
+    width: 100%; } }
+
 .home {
   display: flex;
+  flex-direction: column;
   margin: 30px auto 0;
   width: 80%;
-  max-width: 750px; }
+  max-width: 750px;
+  position: relative; }
   .home svg {
     position: absolute; }
   .home__content {
@@ -22,12 +40,41 @@
     .home__content h2 {
       display: block;
       max-width: 300px; }
+  .home__button {
+    align-self: flex-end;
+    z-index: 2; }
+
+.nav__button {
+  padding: 20px;
+  background: white;
+  text-transform: uppercase;
+  color: #56494E;
+  text-decoration: none;
+  position: relative;
+  transition: .5s;
+  cursor: pointer; }
+  .nav__button:hover:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 50px;
+    background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%);
+    mix-blend-mode: screen;
+    animation: full-width 1s 1 forwards; }
+  .nav__button:hover:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%); }
 
 .box__path {
   fill: #083D77;
   stroke: #DA4167;
   animation: dash 5s linear forwards; }
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0; } }

@@ -1,16 +1,21 @@
 @import 'var/colours.scss';
 @import 'var/spacing.scss';
+@import 'var/keyframes.scss';
 
+// Base
 .home {
   display: flex;
+  flex-direction: column;
   margin: $indent_l auto 0;
   width: 80%;
   max-width: 750px;
+  position: relative;
 
   svg {
     position: absolute;
   }
 
+  // Text content container
   &__content {
     margin: $indent_s 0 0 -$indent_s;
     z-index: 1;
@@ -37,16 +42,57 @@
       max-width: 300px;
     }
   }
+
+  // Button container
+  &__button {
+    align-self: flex-end;
+    z-index:2;
+  }
 }
 
+// Learn More Button
+.nav__button {
+  padding: $indent;
+  background: white;
+  text-transform: uppercase;
+  color: $gray;
+  text-decoration: none;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+
+  // Add Hover Gradient Effect
+  &:hover{
+    &:before {
+      display: block;
+      content:'';
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 50px;
+      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+      mix-blend-mode: screen;
+      animation: full-width 1s 1 forwards;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(60deg, $color-theme-2 25%, $color--fuschia 75%,  $color--light-grey 100%);
+    }
+  }
+}
+
+
+// SVG Box
 .box__path{
   fill: $blue;
   stroke: $rouge;
   animation: dash 5s linear forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
