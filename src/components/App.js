@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LandingPage from './Home';
-import HomePage from './Nav';
+import LandingPage from './LandingPage';
+import HomePage from './Home';
 
 class App extends Component {
   state = {
