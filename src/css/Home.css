@@ -51,7 +51,8 @@
   color: #56494E;
   text-decoration: none;
   position: relative;
-  transition: .5s; }
+  transition: .5s;
+  cursor: pointer; }
   .nav__button:hover:before {
     display: block;
     content: '';
