@@ -61,7 +61,7 @@ class NavButton extends Component {
 class LandingPage extends Component {
   render() {
     return (
-      <div className="home" onClick={() => this.props.goToHome()}>
+      <div className="home">
         <Square />
         <div className="home__content">
           <h2>Hej Hej</h2>
@@ -69,8 +69,8 @@ class LandingPage extends Component {
             <span className="role"> Front End Developer</span>
             <span className="place">in Brighton</span></h1>
         </div>
-        <TransitionGroup className="home__button">
-          {<NavButton elTime={.4} easing="Power1" />}
+        <TransitionGroup className="home__button" onClick={() => this.props.goToHome()}>
+          {<NavButton elTime={.4} easing="Power1"/>}
         </TransitionGroup>
       </div>
     );
