@@ -6,12 +6,23 @@ import TweenMax from "gsap/TweenMax";
 // SVG Square
 class Square extends Component {
   componentDidMount() {
-   const paths = document.querySelectorAll('.swirly__path');
-      for(let i = 0; i < paths.length; i++){
-        const length = paths[i].getTotalLength();
-        paths[i].style.strokeDasharray = length;
-        paths[i].style.strokeDashoffset = length;
-      }
+
+    // Random Colour with Random Alpha
+    function randomRgbaString () {
+      let r = Math.floor(Math.random() * 255)
+      let g = Math.floor(Math.random() * 255)
+      let b = Math.floor(Math.random() * 255)
+      let a = Math.round( Math.random() * 10 ) / 10
+      return `rgba(${r},${g},${b},${a})`
+    }
+
+    const paths = document.querySelectorAll('.swirly__path');
+    for(let i = 0; i < paths.length; i++){
+      const length = paths[i].getTotalLength();
+      paths[i].style.strokeDasharray = length;
+      paths[i].style.strokeDashoffset = length;
+      paths[i].style.stroke = randomRgbaString();
+    }
   }
   
   render() {
@@ -69,7 +80,7 @@ class NavButton extends Component {
   }
 }
 
-// Home Page
+//Home Page
 class LandingPage extends Component {
   render() {
     return (
