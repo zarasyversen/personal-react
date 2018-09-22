@@ -8,18 +8,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: $indent_l auto 0;
+  margin: 0 auto;
   width: 80%;
   max-width: 800px;
   position: relative;
+
+  @media (max-width:$screen__m){
+    width: 95%;
+  }
 
 
   svg {
     position: absolute;
     max-width: 100%;
+    transition: .5s;
 
     @media (max-width:$screen__m){
       transform: rotate(90deg);
+      max-width: 150%;
+      top: 50px;
     }
   }
 
@@ -31,22 +38,27 @@
     text-align: center;
     z-index: 1;
     background: white;
-
     h2, span {
       font-size: 40px;
-      background: white;
       padding: $indent_s;
       box-sizing: border-box;
       margin: $indent 0;
+      background: $rouge;
+
+      @media (max-width:$screen__m){
+        font-size: 20px;
+      }
     }
 
     h1 {
-      display: inline-block;
+      display: block;
     }
 
     .role {
       display: block;
       width: 90%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h2 {
@@ -54,6 +66,10 @@
       max-width: 300px;
       margin-bottom: 0;
     }
+  }
+
+  &__button{
+    margin-top: $indent_l;
   }
 }
 
