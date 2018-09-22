@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../css/Home.css';
 import { TransitionGroup } from 'react-transition-group';
-import TweenMax from "gsap/TweenMax";
+import TweenMax from 'gsap/TweenMax';
+import '../css/Home.css';
 
 // SVG Square
 class Square extends Component {
@@ -68,7 +68,7 @@ class NavButton extends Component {
       scale: 1,
       delay: 4.8,
       ease: `${easing}.easeOut`
-      });
+    });
   }
 
   render() {
