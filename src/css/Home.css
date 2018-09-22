@@ -17,32 +17,52 @@
 .home {
   display: flex;
   flex-direction: column;
-  margin: 30px auto 0;
+  align-items: center;
+  margin: 0 auto;
   width: 80%;
-  max-width: 750px;
+  max-width: 800px;
   position: relative; }
+  @media (max-width: 875px) {
+    .home {
+      width: 95%; } }
   .home svg {
-    position: absolute; }
+    position: absolute;
+    max-width: 100%;
+    transition: .5s; }
+    @media (max-width: 875px) {
+      .home svg {
+        transform: rotate(90deg);
+        max-width: 150%;
+        top: 50px; } }
   .home__content {
-    margin: 10px 0 -10px;
-    z-index: 1; }
+    width: 80%;
+    padding: 20px 0;
+    margin: 110px auto 0;
+    text-align: center;
+    z-index: 1;
+    background: white; }
     .home__content h2, .home__content span {
-      font-size: 50px;
-      background: white;
+      font-size: 40px;
       padding: 10px;
       box-sizing: border-box;
-      margin: 20px 0; }
+      margin: 20px 0;
+      background: #DA4167; }
+      @media (max-width: 875px) {
+        .home__content h2, .home__content span {
+          font-size: 20px; } }
     .home__content h1 {
-      display: inline-block; }
+      display: block; }
     .home__content .role {
       display: block;
-      width: 90%; }
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto; }
     .home__content h2 {
-      display: block;
-      max-width: 300px; }
+      display: inline-block;
+      max-width: 300px;
+      margin-bottom: 0; }
   .home__button {
-    align-self: flex-end;
-    z-index: 2; }
+    margin-top: 30px; }
 
 .nav__button {
   padding: 20px;
@@ -74,7 +94,6 @@
     height: 2px;
     background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%); }
 
-.box__path {
-  fill: #083D77;
+.swirly__path {
   stroke: #DA4167;
   animation: dash 5s linear forwards; }
