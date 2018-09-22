@@ -1,27 +1,39 @@
 @import 'var/colours.scss';
 @import 'var/spacing.scss';
 @import 'var/keyframes.scss';
+@import 'var/responsive.scss';
 
 // Base
 .home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: $indent_l auto 0;
   width: 80%;
-  max-width: 750px;
+  max-width: 800px;
   position: relative;
+
 
   svg {
     position: absolute;
+    max-width: 100%;
+
+    @media (max-width:$screen__m){
+      transform: rotate(90deg);
+    }
   }
 
   // Text content container
   &__content {
-    margin: $indent_s 0 0 -$indent_s;
+    width: 80%;
+    padding: 20px 0;
+    margin: 110px auto 0;
+    text-align: center;
     z-index: 1;
+    background: white;
 
     h2, span {
-      font-size: 50px;
+      font-size: 40px;
       background: white;
       padding: $indent_s;
       box-sizing: border-box;
@@ -38,15 +50,10 @@
     }
 
     h2 {
-      display: block;
+      display: inline-block;
       max-width: 300px;
+      margin-bottom: 0;
     }
-  }
-
-  // Button container
-  &__button {
-    align-self: flex-end;
-    z-index:2;
   }
 }
 
@@ -91,8 +98,7 @@
 
 
 // SVG Box
-.box__path{
-  fill: $blue;
+.swirly__path{
   stroke: $rouge;
   animation: dash 5s linear forwards;
 }

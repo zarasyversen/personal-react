@@ -17,17 +17,26 @@
 .home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 30px auto 0;
   width: 80%;
-  max-width: 750px;
+  max-width: 800px;
   position: relative; }
   .home svg {
-    position: absolute; }
+    position: absolute;
+    max-width: 100%; }
+    @media (max-width: 875px) {
+      .home svg {
+        transform: rotate(90deg); } }
   .home__content {
-    margin: 10px 0 -10px;
-    z-index: 1; }
+    width: 80%;
+    padding: 20px 0;
+    margin: 110px auto 0;
+    text-align: center;
+    z-index: 1;
+    background: white; }
     .home__content h2, .home__content span {
-      font-size: 50px;
+      font-size: 40px;
       background: white;
       padding: 10px;
       box-sizing: border-box;
@@ -38,11 +47,9 @@
       display: block;
       width: 90%; }
     .home__content h2 {
-      display: block;
-      max-width: 300px; }
-  .home__button {
-    align-self: flex-end;
-    z-index: 2; }
+      display: inline-block;
+      max-width: 300px;
+      margin-bottom: 0; }
 
 .nav__button {
   padding: 20px;
@@ -74,7 +81,6 @@
     height: 2px;
     background-image: linear-gradient(60deg, #33cccc 25%, #eb01a5 75%, #e0e0e0 100%); }
 
-.box__path {
-  fill: #083D77;
+.swirly__path {
   stroke: #DA4167;
   animation: dash 5s linear forwards; }
