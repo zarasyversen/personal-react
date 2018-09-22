@@ -6,7 +6,7 @@ import '../css/Home.css';
 // SVG Square
 class Square extends Component {
   componentDidMount() {
-    // Random Colour with Random Alpha
+    // Random Colour 
     function randomRgbaString() {
       const red = Math.floor(Math.random() * 255);
       const green = Math.floor(Math.random() * 255);
