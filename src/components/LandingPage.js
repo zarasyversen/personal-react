@@ -4,7 +4,7 @@ import TweenMax from 'gsap/TweenMax';
 import '../css/Home.css';
 
 // SVG Square
-class Square extends Component {
+class Swirly extends Component {
   componentDidMount() {
     // Random Colour 
     function randomRgbaString() {
@@ -78,20 +78,25 @@ class NavButton extends Component {
   }
 }
 
-//Home Page
+// Home Page
 class LandingPage extends Component {
+  componentWillUnmount() {
+    console.log('I am leaving');
+  }
+
   render() {
     return (
       <div className="home">
-        <Square />
+        <Swirly />
         <div className="home__content">
           <h2>Hej Hej</h2>
           <h1><span className="name">My name is Zara and I am a </span>
             <span className="role"> Front End Developer</span>
-            <span className="place">in Brighton</span></h1>
-        </div>
+            <span className="place">in Brighton</span>
+          </h1>
+        </div> 
         <TransitionGroup className="home__button" onClick={() => this.props.goToHome()}>
-          {<NavButton elTime={.4} easing="Power1" />}
+          {<NavButton elTime={0.4} easing="Power1" />}
         </TransitionGroup>
       </div>
     );

@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
+import { TransitionGroup } from 'react-transition-group';
+import TweenMax from 'gsap/TweenMax';
 import '../css/Nav.css';
 
-class Home extends Component {
+class Nav extends Component {
+  componentDidMount() {
+    const { elTime, easing } = this.props;
+    TweenMax.fromTo(this.home, elTime, {
+      y: -1000,
+    }, {
+      y: 0,
+      ease: `${easing}.easeOut`
+    });
+  }
+
   render() {
     return (
-      <div className="wrapper">
+      <div className="wrapper" ref={c => this.home = c}>
         <nav className="nav__container">
           <a className="nav__item current" href="#">
             <h3>How I am spending my days right now</h3>
@@ -24,6 +36,16 @@ class Home extends Component {
         </nav>
       </div>
     );
+  }
+}
+
+class Home extends Component {
+  render() {
+    return (
+      <TransitionGroup>
+        <Nav elTime={.4} easing="Power1"/>
+      </TransitionGroup>
+    )
   }
 }
 

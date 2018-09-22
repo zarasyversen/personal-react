@@ -8,12 +8,12 @@ class App extends Component {
   }
 
   changeView() {
-    this.setState({ atLanding: false })
+    this.setState({ atLanding: false });
   }
 
   render() {
     if (this.state.atLanding) {
-      return (<LandingPage goToHome={() => this.changeView()} />)
+      return (<LandingPage goToHome={() => this.changeView()} />);
     }
 
     return (
